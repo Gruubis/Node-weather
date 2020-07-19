@@ -36,7 +36,8 @@ header a{
     text-decoration: none;
 }
 .portrait {
-    width: 150px;
+    width: auto;
+    height: auto;
 }
 
 input {
