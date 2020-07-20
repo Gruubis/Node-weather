@@ -13,7 +13,8 @@ const forecast = (longitude, latitude, callback)=> {
             callback('There is no such Latitude or Longitude. Try again.', undefined)
         }
         else {
-            callback(undefined, 'Local time: '+body.location.localtime+ '. '+ body.current.weather_descriptions[0] +  ". Current temperature is " + body.current.temperature + ' And it feels like ' + body.current.feelslike + ' Humidity ' + body.current.humidity +' %')
+            callback(undefined, { info: 'Local time: '+body.location.localtime+ '. '+ body.current.weather_descriptions[0] +  ". Current temperature is " + body.current.temperature + ' And it feels like ' + body.current.feelslike + '. Humidity ' + body.current.humidity +'%',
+            icons: body.current.weather_icons})
         }
     })
 
